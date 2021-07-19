@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 /**
  *
  * @author Administrator
- *chain test 23 goodmain
+ *chain test 23 goodmain king
  */
 @SpringBootApplication
 public class UserInMemoryApplcation {
