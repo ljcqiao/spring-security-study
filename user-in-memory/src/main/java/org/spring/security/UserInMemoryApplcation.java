@@ -12,7 +12,7 @@ public class UserInMemoryApplcation {
 	
 	public static void main(String[] args) {
 		SpringApplication.run(UserInMemoryApplcation.class, args); 
-		
+		//中文测试
 	}
 
 }
