@@ -31,8 +31,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
 	protected void configure(HttpSecurity http) throws Exception {
 		http.authorizeRequests().anyRequest().authenticated() //任意请求都需要认证
 			.and().formLogin().loginPage("/login.html")  //登录页面地址
-				.loginProcessingUrl("/doLogin") //登录处理请求地址
-				.defaultSuccessUrl("/index") //默认登录成功请求
+				.loginProcessingUrl("/doLogin") //登录发送请求地址
+				//.defaultSuccessUrl("/index") //默认登录成功请求
+				.successHandler(new MyAuthenticationSuccessHandler()) //登录成功处理
 				.failureUrl("/login.html") //登录失败跳转地址
 				.usernameParameter("username")
 				.passwordParameter("password")
