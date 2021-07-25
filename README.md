@@ -24,4 +24,6 @@ springsecurity学习
 	failureForwardUrl 这种跳转是一种服务器端跳转，服务器端跳转的好处是可以携带登录异常信息。如果登录失败，自动跳转回登录页面后，就可以将错误信息展示出来。
 1.6、自定义AuthenticationFailure
 	无论是 failureUrl 还是 failureForwardUrl，最终所配置的都是 AuthenticationFailureHandler 接口的实现。Spring Security 中提供了 AuthenticationFailureHandler 接口，用来规范登录失败的实现。
-		
+
+2、登出请求处理
+   

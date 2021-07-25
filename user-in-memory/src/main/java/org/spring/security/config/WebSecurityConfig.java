@@ -3,6 +3,7 @@ package org.spring.security.config;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.web.authentication.logout.LogoutHandler;
 
 /**
  * 在 Spring Security 中，如果我们需要自定义配置，基本上都是继承自 WebSecurityConfigurer
@@ -40,6 +41,10 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
 				.usernameParameter("username")
 				.passwordParameter("password")
 				.permitAll()
+			.and().logout().logoutUrl("/logout")
+							.clearAuthentication(true)
+							.invalidateHttpSession(true)
+			  				.logoutSuccessHandler(new MyLogoutSuccessHandler())
 			.and().csrf().disable(); //关闭csrf攻击保护
 	}
 	
