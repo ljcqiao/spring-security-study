@@ -19,7 +19,9 @@
   <packaging>pom</packaging>
   <name>xuwen</name>
   <description>springsecurity学习</description>
-  <modules></modules>
+  <modules>
+  	<module>user-in-mybatis</module>
+  </modules>
   
   <dependencies>
   	<dependency>
