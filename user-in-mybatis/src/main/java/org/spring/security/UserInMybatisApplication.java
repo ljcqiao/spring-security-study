@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan({"org.spring.security"})
+@ComponentScan({"org.spring.security.*"})
 public class UserInMybatisApplication {
 	
 	public static void main(String[] args) {

@@ -21,6 +21,7 @@
   <description>springsecurity学习</description>
   <modules>
   	<module>user-in-mybatis</module>
+  	<module>user-mybatis-db</module>
   </modules>
   
   <dependencies>

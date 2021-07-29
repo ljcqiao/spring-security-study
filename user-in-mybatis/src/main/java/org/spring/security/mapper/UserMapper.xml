@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="org.spring.security.user.mapper.UserDao">
-	<select id="loadUserByUsername" resultType="org.javaboy.formlogin.model.User">
+	<select id="loadUserByUsername" resultType="org.spring.security.user.User">
        SELECT id,
 			username,
 			password,
-			enable,
-			account_non_expired accountNonExpired,
-			credentials_non_expired credentialsNonExpired
+			if(enable='1','true','false') enabled,
+			if(account_non_expired='1','true','false') accountNonExpired,
+			if(credentials_non_expired='1','true','false') credentialsNonExpired,
+			if(account_non_locked='1','true','false') accountNonLocked
 		FROM user 
 	   where username=#{username}
    </select>
