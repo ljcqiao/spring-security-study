@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.spring.security.user.mapper.UserDao">
+	<select id="loadUserByUsername" resultType="org.javaboy.formlogin.model.User">
+       SELECT id,
+			username,
+			password,
+			enable,
+			account_non_expired accountNonExpired,
+			credentials_non_expired credentialsNonExpired
+		FROM user 
+	   where username=#{username}
+   </select>
+   
+   <select id="getRolesByUid" resultType="org.spring.security.user.Role">
+       SELECT
+			r.id,
+			name,
+			name_china nameChina 
+		FROM
+			role r,
+			user_role ur 
+		WHERE
+			r.id = ur.rid
+			and ur.uid=#{uid}
+   </select>
+</mapper>
+       
