@@ -83,7 +83,8 @@
 	spring.datasource.url=jdbc:mysql://192.16.24.13:3306/auc?characterEncoding=utf-8
 ## 2.4、用户、角色对象
 ## 2.5、自定义UserDetailsService
-
+# 认证流程分析
+## 关键类
 
 	
 		

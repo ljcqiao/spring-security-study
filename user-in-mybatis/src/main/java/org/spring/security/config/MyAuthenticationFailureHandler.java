@@ -22,7 +22,7 @@ public class MyAuthenticationFailureHandler implements AuthenticationFailureHand
 		response.setContentType("application/json;charset=utf-8");
 		Map<String,String> result  = new HashMap<String,String>();
 		result.put("status", "1");
-		result.put("msg", "登录失败");
+		result.put("msg", "登录失败:"+exception.getMessage());
 		ObjectMapper om = new ObjectMapper();
 		String s = om.writeValueAsString(result);
 		response.getWriter().write(s);

@@ -13,6 +13,7 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 @EnableWebSecurity
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
 	
+	
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 		http.authorizeRequests().anyRequest().authenticated() //任意请求都需要认证
@@ -32,5 +33,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
 		  				.logoutSuccessHandler(new MyLogoutSuccessHandler())
 		.and().csrf().disable(); //关闭csrf攻击保护
 	}
-
+	
+	
 }
