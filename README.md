@@ -85,6 +85,6 @@
 ## 2.5、自定义UserDetailsService
 # 认证流程分析
 ## 关键类
-![login](https://github.com/ljcqiao/spring-security-study/blob/springsecurity-mybatis/user-in-mybatis/src/main/resources/static/picture/log.png "auth")
+	![login](https://github.com/ljcqiao/spring-security-study/blob/springsecurity-mybatis/user-in-mybatis/src/main/resources/static/picture/log.png "auth")
 	
 		
